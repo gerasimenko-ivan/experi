@@ -1,5 +1,6 @@
 public class SimpleObject {
     public int id;
+    public SimpleObject simpleObject;
 
     public SimpleObject withID(int id) {
         this.id = id;
