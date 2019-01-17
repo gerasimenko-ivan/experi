@@ -11,7 +11,7 @@ public class RestManager {
 
     public RestManager (List<Table> tables)
     {
-        // TODO
+        // METHOD REQUESTED BY EMPLOYER
         Collections.sort(tables, new Comparator<Table>() {
             @Override
             public int compare(Table o1, Table o2) {
@@ -24,6 +24,7 @@ public class RestManager {
     // new client(s) show up
     public void onArrive (ClientsGroup group)
     {
+        // METHOD REQUESTED BY EMPLOYER
         Table availableTable = checkAvailableTable(group);
 
         if (availableTable != null)
@@ -35,7 +36,7 @@ public class RestManager {
     // client(s) leave, either served or simply abandoning the queue
     public void onLeave (ClientsGroup group)
     {
-        // TODO
+        // METHOD REQUESTED BY EMPLOYER
         Table tableWithGroup = lookup(group);
         if (tableWithGroup != null) {
             tableWithGroup.groupLeaves(group);
@@ -64,7 +65,7 @@ public class RestManager {
     // or null if it is still queuing or has already left
     public Table lookup (ClientsGroup group)
     {
-        // TODO
+        // METHOD REQUESTED BY EMPLOYER
         for (Table table : tables) {
             if (table.isGroupOnTable(group))
                 return table;
@@ -75,7 +76,6 @@ public class RestManager {
     // returnes suitable table for group or null if it is not available
     public Table checkAvailableTable (ClientsGroup group)
     {
-        // TODO
         int numberOfTables = tables.size();
         Table bestPartiallyFreeTable = null;
         for (int i = 0; i < numberOfTables; i++) {
