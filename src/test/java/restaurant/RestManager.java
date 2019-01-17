@@ -97,4 +97,8 @@ public class RestManager {
     public int getQueueSize() {
         return groupsQueue.size();
     }
+
+    public String getGroupsToTablesDisribution() {
+        return "Should return something like {table-2: {group: 2}; table-4: {group: 2 + 2}}";
+    }
 }
