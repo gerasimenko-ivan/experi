@@ -2,7 +2,16 @@ package binding;
 
 public class Car {
 
-    public String regNumber;
-    public String model;
+    private String regNumber;
+    private String model;
 
+    public Car setRegNumber(String regNumber) {
+        this.regNumber = regNumber;
+        return this;
+    }
+
+    public Car setModel(String model) {
+        this.model = model;
+        return this;
+    }
 }
