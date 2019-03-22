@@ -1,6 +1,6 @@
 package boxingUnboxing;
 
 public class C extends B {
-    public String name;
+    public String nameBySomeone;
     public Integer ID;
 }
